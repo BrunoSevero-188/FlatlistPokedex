@@ -1,0 +1,93 @@
+import { StyleSheet } from "react-native";
+
+export const POKEMON_COLORS = {
+  normal: "#A8A878",
+  fire: "#F08030",
+  water: "#6890F0",
+  electric: "#F8D030",
+  grass: "#78C850",
+  ice: "#98D8D8",
+  fighting: "#C03028",
+  poison: "#A040A0",
+  ground: "#E0C068",
+  flying: "#A890F0",
+  psychic: "#F85888",
+  bug: "#A8B820",
+  rock: "#B8A038",
+  ghost: "#705898",
+  dragon: "#7038F8",
+  steel: "#B8B8D0",
+  fairy: "#EE99AC",
+  dark: "#705848",
+} as const;
+
+export const styles = StyleSheet.create({
+  card: {
+    alignItems: "center",
+    borderRadius: 10,
+    marginBottom: 10,
+    marginTop: 50,
+    minHeight: 170,
+    padding: 10,
+    width: "100%",
+  },
+  header: {
+    alignItems: "center",
+    flexDirection: "column",
+    width: "100%",
+  },
+  imageCircle: {
+    alignItems: "center",
+    backgroundColor: "rgba(255, 255, 255, 0.75)",
+    borderColor: "#FFF",
+    borderRadius: 60,
+    borderWidth: 3,
+    height: 112,
+    justifyContent: "center",
+    position: "absolute",
+    top: -56,
+    width: 112,
+  },
+  image: {
+    height: 92,
+    width: 92,
+  },
+  info: {
+    alignItems: "center",
+    marginTop: 58,
+    width: "100%",
+  },
+  id: {
+    color: "#FFF",
+    fontSize: 12,
+    fontWeight: "700",
+    textAlign: "center",
+  },
+  name: {
+    color: "#FFF",
+    fontSize: 20,
+    fontWeight: "700",
+    marginTop: 2,
+    textAlign: "center",
+  },
+  types: {
+    justifyContent: "center",
+    flexDirection: "row",
+    flexWrap: "wrap",
+    gap: 8,
+    marginTop: 10,
+  },
+  typeBadge: {
+    borderColor: "#FFF",
+    borderWidth: 1,
+    borderRadius: 8,
+    paddingHorizontal: 10,
+    paddingVertical: 5,
+  },
+  typeText: {
+    color: "#FFF",
+    fontSize: 12,
+    fontWeight: "700",
+    textTransform: "uppercase",
+  },
+});
