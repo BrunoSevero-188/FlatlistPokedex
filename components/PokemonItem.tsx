@@ -1,8 +1,9 @@
 import { POKEMON_COLORS, styles } from "@/conjuntosCss/pokemon-item.styles";
 import type { Pokemon } from "@/types/types";
 import { useRouter } from "expo-router";
+import { Image } from "expo-image";
 import { LinearGradient } from "expo-linear-gradient";
-import { Image, Pressable, Text, View } from "react-native";
+import { Pressable, Text, View } from "react-native";
 
 export type PokemonType = keyof typeof POKEMON_COLORS;
 
@@ -43,9 +44,13 @@ export default function PokemonItem({ pokemon }: PokemonItemProps) {
         <View style={styles.header}>
           <View style={styles.imageCircle}>
             <Image
-              source={{ uri: pokemon.image }}
+              source={pokemon.image}
               style={styles.image}
-              resizeMode="contain"
+              contentFit="contain"
+              cachePolicy="memory-disk"
+              transition={120}
+              autoplay
+              recyclingKey={String(pokemon.id)}
             />
           </View>
 

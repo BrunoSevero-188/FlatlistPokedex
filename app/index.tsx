@@ -6,8 +6,15 @@ import { styles } from "@/conjuntosCss/index.styles";
 import { ActivityIndicator, Text, View } from "react-native";
 
 export default function Index() {
-  const { todosPokemons, lista, setLista, loading, erro, mostrarTodos, mostrarPorTipo } =
-    usePokemon();
+  const {
+    todosPokemons,
+    lista,
+    setLista,
+    loading,
+    erro,
+    mostrarTodos,
+    mostrarPorTipo,
+  } = usePokemon();
 
   return (
     <View style={styles.container}>

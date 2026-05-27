@@ -1,12 +1,12 @@
 import type { PokemonType } from "@/components/PokemonItem";
 import { POKEMON_COLORS } from "@/conjuntosCss/pokemon-item.styles";
 import { usePokemonDetalhes } from "@/hooks/usePokemonDetalhes";
+import { Image } from "expo-image";
 import { LinearGradient } from "expo-linear-gradient";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import {
   ActivityIndicator,
   type DimensionValue,
-  Image,
   Pressable,
   ScrollView,
   StyleSheet,
@@ -92,9 +92,13 @@ export default function DetalhesPokemon() {
         </View>
 
         <Image
-          source={{ uri: detalhes.image }}
+          source={detalhes.image}
           style={styles.imagemGrande}
-          resizeMode="contain"
+          contentFit="contain"
+          cachePolicy="memory-disk"
+          transition={120}
+          autoplay
+          recyclingKey={String(detalhes.id)}
         />
       </LinearGradient>
 

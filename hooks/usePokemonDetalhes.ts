@@ -41,9 +41,9 @@ const montarDetalhes = (json: PokemonDetalhesApi): PokemonDetalhes => ({
   id: json.id,
   name: json.name,
   image:
-    json.sprites.other?.["official-artwork"]?.front_default ??
     json.sprites.other?.showdown?.front_default ??
     json.sprites.front_default ??
+    json.sprites.other?.["official-artwork"]?.front_default ??
     "",
   imageFront: json.sprites.front_default ?? "",
   types: json.types.map((tipo) => tipo.type.name),
